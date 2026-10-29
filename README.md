@@ -1,6 +1,6 @@
 # Enterprise Network Simulation (Cisco Packet Tracer)
 
-Dự án thiết kế, quy hoạch IP và mô phỏng hệ thống mạng doanh nghiệp phân tầng sử dụng Cisco Packet Tracer[cite: 9].
+Dự án thiết kế, quy hoạch IP và mô phỏng hệ thống mạng doanh nghiệp phân tầng sử dụng Cisco Packet Tracer
 
 ---
 

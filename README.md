@@ -20,4 +20,5 @@ Dự án thiết kế, quy hoạch IP và mô phỏng hệ thống mạng doanh 
 - **Layer 3 Routed Port:** Chuyển đổi cổng giao tiếp giữa `SW CORE` và `R0` (`no switchport`)
 - **Static Routing 2 chiều:** Định tuyến tĩnh giữa `SW CORE` và `R0` đảm bảo thông tuyến toàn bộ phân đoạn mạng
 - **L2 Switching:** Cấu hình Trunking, Access ports trên `SW AC1`, `SW AC2` và `SW SERVER`.
+## Sơ đồ mạng 
 <img width="1917" height="1055" alt="image" src="https://github.com/user-attachments/assets/6d3f924e-ad95-453f-94d5-bb6c02e29d28" />

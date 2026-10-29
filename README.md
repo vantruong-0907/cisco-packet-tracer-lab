@@ -1,22 +1,22 @@
 # Enterprise Network Simulation (Cisco Packet Tracer)
 
-Dự án thiết kế, quy hoạch IP và mô phỏng hệ thống mạng doanh nghiệp phân tầng sử dụng Cisco Packet Tracer.
+Dự án thiết kế, quy hoạch IP và mô phỏng hệ thống mạng doanh nghiệp phân tầng sử dụng Cisco Packet Tracer[cite: 9].
 
 ---
 
 ## 📐 Kiến trúc Mô hình & Thiết bị
-- **Core Layer:** Multilayer Switch Cisco 3650 (Đảm nhận Inter-VLAN Routing, DHCP Server).
-- **Edge Layer:** Router Cisco 2911 (Định tuyến biên kết nối nhánh Server).
-- **Access Layer:** Switch Cisco 2960 và các máy trạm (PC/Server).
+- **Core Layer:** Multilayer Switch (`SW CORE` - Cisco 3650) đảm nhận Inter-VLAN Routing và cấp phát DHCP.
+- **Edge Layer:** Router biên (`R0` - Cisco 2911) kết nối nhánh Server.
+- **Access Layer:** Các Switch truy nhập (`SW AC1`, `SW AC2`, `SW SERVER` - Cisco 2960) kết nối các máy trạm (PC/Server)[cite: 11].
 
 ## 🌐 Quy hoạch Địa chỉ IP
-- **VLAN 10:** `192.168.0.0/23` (Gateway: `192.168.0.1`)
-- **VLAN 11:** `192.168.10.0/24` (Gateway: `192.168.10.1`)
-- **Server Network:** `10.0.0.0/24` (Gateway: `10.0.0.1`)
-- **Point-to-Point Link (Core - Router):** `172.16.0.0/30`
+- **VLAN 10:** `192.168.1.0/23` (Gateway: `192.168.1.1`)[cite: 9]
+- **VLAN 11:** `192.168.10.0/24` (Gateway: `192.168.10.1`)[cite: 9]
+- **Server Network:** `10.0.0.0/24` (Gateway: `10.0.0.1`)[cite: 9]
+- **Point-to-Point Link (SW CORE - R0):** `172.16.0.0/30`[cite: 9]
 
 ## ⚙️ Kỹ thuật & Cấu hình Nổi bật
-- **Inter-VLAN Routing & Dynamic IP:** Bật `ip routing` và cấu hình DHCP Pools trực tiếp trên Core Switch.
-- **Layer 3 Routed Port:** Chuyển đổi cổng giao tiếp giữa Core Switch và Router biên (`no switchport`).
-- **Static Routing 2 chiều:** Định tuyến tĩnh giữa Core Switch và Router0 đảm bảo thông tuyến toàn bộ phân đoạn mạng.
-- **L2 Switching:** Cấu hình 802.1Q Trunking, Access ports.
+- **Inter-VLAN Routing & Dynamic IP:** Bật `ip routing` và cấu hình DHCP Pools trực tiếp trên `SW CORE`.
+- **Layer 3 Routed Port:** Chuyển đổi cổng giao tiếp giữa `SW CORE` và `R0` (`no switchport`)[cite: 9].
+- **Static Routing 2 chiều:** Định tuyến tĩnh giữa `SW CORE` và `R0` đảm bảo thông tuyến toàn bộ phân đoạn mạng[cite: 9].
+- **L2 Switching:** Cấu hình Trunking, Access ports trên `SW AC1`, `SW AC2` và `SW SERVER`.
